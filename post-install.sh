@@ -18,9 +18,6 @@ deb https://deb.debian.org/debian-ports unreleased main
 apt update
 apt upgrade
 
-# Full upgrade
-apt full-upgrade
-
 # To use rumpdisk, some modifications are needed and qemu needs to be
 # booted with '-M q35'
 # From https://darnassus.sceen.net/~hurd-web/hurd/rump/rumpdisk/
