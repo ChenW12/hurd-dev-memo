@@ -18,6 +18,12 @@ deb https://deb.debian.org/debian-ports unreleased main
 apt update
 apt upgrade
 
+# Smart upgrade
+apt-get dist-upgrade
+
+# To have a better terminal only qemu output
+GRUB_TERMINAL_OUTPUT="vga_text"
+
 # To use rumpdisk, some modifications are needed and qemu needs to be
 # booted with '-M q35'
 # From https://darnassus.sceen.net/~hurd-web/hurd/rump/rumpdisk/
