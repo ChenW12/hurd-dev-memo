@@ -44,3 +44,5 @@ multiboot   /boot/gnumach-1.8-486.gz root=part:2:device:wd0 console=com0
 #/dev/hd2        /media/cdrom0   iso9660 noauto          0       0
 /dev/wd2        /media/cdrom0   iso9660 noauto          0       0
 
+# To use ssh to access the virtual machine, openssh-server has to be installed
+apt install openssh-server
