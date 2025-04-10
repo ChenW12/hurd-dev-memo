@@ -32,6 +32,10 @@ GRUB_TERMINAL_OUTPUT="vga_text"
 # make sure you add this next line somewhere in the file
 GRUB_CMDLINE_GNUMACH="noide"
 
+# In /boot/grub/grub.cfg
+# multiboot /boot/gnumach-1.8-486.gz root=part:2:device:hd0 console=com0
+multiboot   /boot/gnumach-1.8-486.gz root=part:2:device:wd0 console=com0
+
 # In /etc/fstab
 #/dev/hd0s2      /               ext2    defaults        0       1
 /dev/wd0s2      /               ext2    defaults        0       1
