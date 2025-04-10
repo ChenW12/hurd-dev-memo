@@ -46,3 +46,9 @@ multiboot   /boot/gnumach-1.8-486.gz root=part:2:device:wd0 console=com0
 
 # To use ssh to access the virtual machine, openssh-server has to be installed
 apt install openssh-server
+
+# To have sudo, we need to install sudo package and add user 'demo' in
+# visudo
+apt install sudo
+# Add 'demo  ALL=(ALL:ALL) ALL'
+visudo
