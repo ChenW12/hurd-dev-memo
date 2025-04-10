@@ -17,3 +17,23 @@ deb https://deb.debian.org/debian-ports unreleased main
 # Upgrade
 apt update
 apt upgrade
+
+# Full upgrade
+apt full-upgrade
+
+# To use rumpdisk, some modifications are needed and qemu needs to be
+# booted with '-M q35'
+# From https://darnassus.sceen.net/~hurd-web/hurd/rump/rumpdisk/
+
+# In /etc/default/grub
+# make sure you add this next line somewhere in the file
+GRUB_CMDLINE_GNUMACH="noide"
+
+# In /etc/fstab
+#/dev/hd0s2      /               ext2    defaults        0       1
+/dev/wd0s2      /               ext2    defaults        0       1
+#/dev/hd0s1      none            swap    sw              0       0
+/dev/wd0s1      none            swap    sw              0       0
+#/dev/hd2        /media/cdrom0   iso9660 noauto          0       0
+/dev/wd2        /media/cdrom0   iso9660 noauto          0       0
+
